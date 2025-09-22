@@ -1,0 +1,32 @@
+{"id": "p001", "type": "pattern", "label": "loan-offer", "pattern": "(대\\s*출|소액\\s*대출|저금리\\s*대출|대출\\s*신청|연이율|상환\\s*기간)", "severity": 0.6, "tags": ["대출사기"]}
+{"id": "p002", "type": "pattern", "label": "safe-account", "pattern": "안전\\s*계좌.*(즉시|바로).{0,6}(이체|송금)", "severity": 0.95, "tags": ["안전계좌", "검찰사칭"]}
+{"id": "p003", "type": "pattern", "label": "prosecutor-impersonation", "pattern": "(검찰|경찰|수사관).{0,12}(압수수색|계좌\\s*동결|수사\\s*협조)", "severity": 0.85, "tags": ["검찰사칭"]}
+{"id": "p004", "type": "pattern", "label": "kakao-openchat", "pattern": "https?://open\\.kakao\\.com/o/[A-Za-z0-9]+", "severity": 0.95, "tags": ["오픈채팅", "원격유도"]}
+{"id": "p005", "type": "pattern", "label": "remote-tools", "pattern": "(?:AnyDesk|애니데스크|TeamViewer|팀뷰어|원격제어|원격\\s*지원)", "severity": 0.9, "tags": ["원격유도"]}
+{"id": "p006", "type": "pattern", "label": "usdt", "pattern": "\\bUSDT\\b", "severity": 0.9, "tags": ["코인송금"]}
+{"id": "p007", "type": "pattern", "label": "chain-networks", "pattern": "\\b(TRC20|ERC20)\\b", "severity": 0.9, "tags": ["코인송금"]}
+{"id": "p008", "type": "pattern", "label": "eth-address", "pattern": "0x[a-fA-F0-9]{40}", "severity": 0.9, "tags": ["코인송금"]}
+{"id": "p009", "type": "pattern", "label": "exchange-address", "pattern": "(바이낸스|업비트|빗썸).{0,12}(지갑|월렛|주소)", "severity": 0.85, "tags": ["코인송금"]}
+{"id": "p010", "type": "pattern", "label": "gift-card", "pattern": "(문화상품권|기프티콘|기프트\\s*카드|구글\\s*플레이\\s*카드).{0,10}(충전|인증|번호)", "severity": 0.85, "tags": ["상품권사기"]}
+{"id": "p011", "type": "pattern", "label": "otp-request", "pattern": "(인증번호|OTP|\\d{6}\\s*자리).{0,8}(불러|말해|입력|보내)", "severity": 0.85, "tags": ["인증탈취"]}
+{"id": "p012", "type": "pattern", "label": "family-emergency", "pattern": "(아들|딸|남편|와이프|가족|지인).{0,10}(교통사고|응급실|병원비|보증금)", "severity": 0.8, "tags": ["가족사칭"]}
+{"id": "p013", "type": "pattern", "label": "parcel-customs", "pattern": "(관세|통관|세관|배송\\s*지연).{0,12}(납부|결제|수수료)", "severity": 0.75, "tags": ["택배사칭"]}
+{"id": "p014", "type": "pattern", "label": "bank-account-push", "pattern": "(계좌|계정|예금주|입금|송금).{0,10}(확인|전송|입력|제출)", "severity": 0.7, "tags": ["계좌유도"]}
+{"id": "p015", "type": "pattern", "label": "shorteners", "pattern": "https?://(bit\\.ly|me2\\.kr|tinyurl\\.com|t\\.co)/[A-Za-z0-9]+", "severity": 0.8, "tags": ["의심링크"]}
+{"id": "p016", "type": "pattern", "label": "fake-link-text", "pattern": "(본인인증|보안|업데이트|해제).{0,10}(링크|주소|URL).{0,5}(접속|클릭)", "severity": 0.8, "tags": ["의심링크"]}
+{"id": "p017", "type": "pattern", "label": "account-freeze", "pattern": "(계좌|카드).{0,8}(정지|잠금|동결|이상\\s*거래).{0,8}(해제|복구)", "severity": 0.8, "tags": ["금융사칭"]}
+{"id": "p018", "type": "pattern", "label": "refund-bait", "pattern": "(환급|환불|캐시백|보조금).{0,8}(신청|안내|진행)", "severity": 0.7, "tags": ["환급사기"]}
+{"id": "p019", "type": "pattern", "label": "investment-pump", "pattern": "(수익|원금\\s*보장|확정\\s*수익|단기\\s*투자).{0,10}(보장|확정|배당)", "severity": 0.8, "tags": ["투자사기"]}
+{"id": "p020", "type": "pattern", "label": "account-screenshot", "pattern": "(화면|캡처|스크린샷).{0,8}(공유|보내|전송)", "severity": 0.7, "tags": ["원격유도"]}
+{"id": "p021", "type": "pattern", "label": "kakao-verification", "pattern": "(카카오|카톡|오픈채팅).{0,10}(본인|인증|확인)", "severity": 0.75, "tags": ["오픈채팅"]}
+{"id": "p022", "type": "pattern", "label": "address-ask", "pattern": "(신분증|주민등록증|운전면허|여권).{0,10}(앞면|뒷면|사본|사진)", "severity": 0.85, "tags": ["신분증탈취"]}
+{"id": "p023", "type": "pattern", "label": "salary-loan-bait", "pattern": "(급여|연봉|재직).{0,10}(확인|서류).{0,8}(대\\s*출|한도)", "severity": 0.7, "tags": ["대출사기"]}
+{"id": "p024", "type": "pattern", "label": "phone-transfer", "pattern": "(계좌이체|폰뱅킹|이체).{0,10}(유도|안내|진행)", "severity": 0.7, "tags": ["계좌유도"]}
+{"id": "p025", "type": "pattern", "label": "agency-safe-account-anyorder-60", "pattern": "(?is)(?:검찰|검찰청|경찰|경찰청|사이버수사대|수사)[^\\n]{0,60}(?:안전\\s*계좌|안전계좌|안심계좌|보호계좌|보안계좌|이체|송금)|(?:안전\\s*계좌|안전계좌|안심계좌|보호계좌|보안계좌|이체|송금)[^\\n]{0,60}(?:검찰|검찰청|경찰|경찰청|사이버수사대|수사)", "severity": 0.95, "tags": ["검찰사칭", "안전계좌"]}
+{"id": "p026", "type": "pattern", "label": "agency-legal-threat-join", "pattern": "(?is)(?:검찰|검찰청|경찰|경찰청|사이버수사대|수사).{0,80}(?:압수|체포|구속|영장|범죄\\s*연루).{0,80}(?:계좌|이체|송금|안전\\s*계좌)", "severity": 0.9, "tags": ["검찰사칭", "위협"]}
+{"id": "p027", "type": "pattern", "label": "safety-account-core", "pattern": "(?is)안전\\s*계좌", "severity": 0.8, "tags": ["안전계좌"]}
+{"id": "p000_test", "type": "pattern", "label": "test-core-anz", "pattern": ["안전\\s*계좌"], "severity": 0.5, "tags": ["안전계좌"]}
+{"id": "p000_test2", "type": "pattern", "label": "test-anydesk", "pattern": ["AnyDesk|애니데스크|TeamViewer|팀뷰어"], "severity": 0.8, "tags": ["원격유도"]}
+{"id": "p1", "label": "검찰·수사기관 사칭", "severity": 0.9, "pattern": ["(?is)서울중앙지검\\s*수사관", "(?i)검찰청\\s*수사관"], "flags": "m", "tags": {"agency": 1, "threat": 0.5}}
+{"id": "p2", "label": "안전계좌 유도", "severity": 0.9, "pattern": "(?i)안전\\s*계좌\\s*로\\s*이체", "tags": {"payment": 1}}
+{"id": "p3", "label": "대환대출 기망", "severity": 0.7, "patterns": ["(?i)대환\\s*대출", "(?i)저금리\\s*전환"], "tags": {"loan": 1}}

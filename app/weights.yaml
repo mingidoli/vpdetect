@@ -1,0 +1,148 @@
+# weights.yaml (안정 버전)
+
+schema_version: 1
+default_profile: ml_boosted
+
+# ── 레거시 엔진 참조용 루트 ──────────────
+risk:
+  weights:
+    pattern: 0.30
+    tags:    0.15
+    keyword: 0.08
+    entity:  0.10
+    amount:  0.10
+    channel: 0.04
+    sim:     0.03
+    ml:      0.20
+  thresholds:
+    safe:     0.25
+    warn:     0.43
+    high:     0.68
+    critical: 0.88
+  feature_caps:
+    pattern_max: 1.0
+    tags_max:    1.0
+    keyword_max: 1.0
+    entity_max:  1.0
+    amount_max:  1.0
+    channel_max: 1.0
+    sim_max:     1.0
+    ml_max:      1.0
+  amount_buckets:
+    - { lt: 50,   mul: 1.00 }
+    - { lt: 200,  mul: 1.05 }
+    - { lt: 500,  mul: 1.10 }
+    - { lt: 1000, mul: 1.15 }
+    - { gte: 1000, mul: 1.20 }
+  channel_multipliers:
+    call:    1.00
+    sms:     1.05
+    mms:     1.05
+    chat:    1.08
+    link:    1.10
+    app:     1.12
+    unknown: 1.00
+  tag_hints:
+    가족사칭:       { multiplier: 1.05 }
+    안전계좌:       { multiplier: 1.08 }
+    원격제어:       { multiplier: 1.10 }
+    단축링크:       { multiplier: 1.06 }
+    대환대출:       { multiplier: 1.05 }
+    재난지원금:     { multiplier: 1.05 }
+    신분증사본요구: { multiplier: 1.07 }
+
+# ── 프로파일 ───────────────────────────
+profiles:
+  default:
+    weights:
+      pattern: 0.35
+      tags:    0.15
+      keyword: 0.10
+      entity:  0.10
+      amount:  0.10
+      channel: 0.05
+      sim:     0.05
+      ml:      0.10
+    thresholds:
+      safe:     0.25
+      warn:     0.45
+      high:     0.70
+      critical: 0.88
+    feature_caps:
+      pattern_max: 1.0
+      tags_max:    1.0
+      keyword_max: 1.0
+      entity_max:  1.0
+      amount_max:  1.0
+      channel_max: 1.0
+      sim_max:     1.0
+      ml_max:      1.0
+    amount_buckets:
+      - { lt: 50,   mul: 1.00 }
+      - { lt: 200,  mul: 1.05 }
+      - { lt: 500,  mul: 1.10 }
+      - { lt: 1000, mul: 1.15 }
+      - { gte: 1000, mul: 1.20 }
+    channel_multipliers:
+      call:    1.00
+      sms:     1.05
+      mms:     1.05
+      chat:    1.08
+      link:    1.10
+      app:     1.12
+      unknown: 1.00
+    tag_hints:
+      가족사칭:       { multiplier: 1.05 }
+      안전계좌:       { multiplier: 1.08 }
+      원격제어:       { multiplier: 1.10 }
+      단축링크:       { multiplier: 1.06 }
+      대환대출:       { multiplier: 1.05 }
+      재난지원금:     { multiplier: 1.05 }
+      신분증사본요구: { multiplier: 1.07 }
+
+  ml_boosted:
+    weights:
+      pattern: 0.30
+      tags:    0.15
+      keyword: 0.08
+      entity:  0.10
+      amount:  0.10
+      channel: 0.04
+      sim:     0.03
+      ml:      0.20
+    thresholds:
+      safe:     0.25
+      warn:     0.43
+      high:     0.68
+      critical: 0.88
+    feature_caps:
+      pattern_max: 1.0
+      tags_max:    1.0
+      keyword_max: 1.0
+      entity_max:  1.0
+      amount_max:  1.0
+      channel_max: 1.0
+      sim_max:     1.0
+      ml_max:      1.0
+    amount_buckets:
+      - { lt: 50,   mul: 1.00 }
+      - { lt: 200,  mul: 1.05 }
+      - { lt: 500,  mul: 1.10 }
+      - { lt: 1000, mul: 1.15 }
+      - { gte: 1000, mul: 1.20 }
+    channel_multipliers:
+      call:    1.00
+      sms:     1.05
+      mms:     1.05
+      chat:    1.08
+      link:    1.10
+      app:     1.12
+      unknown: 1.00
+    tag_hints:
+      가족사칭:       { multiplier: 1.05 }
+      안전계좌:       { multiplier: 1.08 }
+      원격제어:       { multiplier: 1.10 }
+      단축링크:       { multiplier: 1.06 }
+      대환대출:       { multiplier: 1.05 }
+      재난지원금:     { multiplier: 1.05 }
+      신분증사본요구: { multiplier: 1.07 }

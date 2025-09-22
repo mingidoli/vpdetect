@@ -1,0 +1,8 @@
+{"id":"gov_investigation_refund","label":"정부기관 사칭 - 조사/환급","regex":"(국세청|검찰|경찰|금감원|조사과|수사팀).{0,12}(조사|수사|환급|체납|체납금|대포통장)","severity":0.9}
+{"id":"bank_app_install","label":"은행 앱/대출 앱 설치 유도","regex":"(앱|어플|대출 ?전용).{0,12}(설치|다운로드|설치해)","severity":0.85}
+{"id":"family_emergency","label":"가족사칭 긴급송금","regex":"(엄마|아빠|어머니|아버지|형|누나|오빠|동생|아들|딸).{0,40}(사고|급히|당장|돈|보내줘)","severity":0.9}
+{"id":"card_info_request","label":"카드/비밀번호 요구","regex":"(카드( 앞뒤)?|카드번호|비밀번호|비번).{0,14}(알려|입력|전송)","severity":0.95}
+{"id":"link_phishing","label":"링크·과태료 위협","regex":"(링크|클릭).{0,10}(고객센터|납부|과태료|법적 절차)","severity":0.7}
+{"id":"fake_warrant","label":"영장/구속영장 위협","regex":"(구속영장|체포영장|검사 직인|영장).{0,20}(보내|사진)","severity":0.95}
+{"id":"otp_request","label":"OTP/인증번호 요구","regex":"(OTP|인증번호|보안코드).{0,10}(알려|입력|전송)","severity":0.98}
+{"id":"deepvoice_check","label":"딥보이스/합성 의심","regex":"(목소리.?맞죠|딥보이스|합성)","severity":0.9}

@@ -1,0 +1,15 @@
+weights:
+  # 일반 텍스트(통화 전사 등)
+  rag: 0.60
+  keyword: 0.25
+  entity: 0.15
+
+weights_sms:
+  # SMS는 짧아서 키워드/엔티티 비중을 더 줌
+  rag: 0.30
+  keyword: 0.40
+  entity: 0.30
+
+thresholds:
+  high: 0.75
+  mid: 0.55

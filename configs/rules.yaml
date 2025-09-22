@@ -1,0 +1,29 @@
+keywords:
+  - pattern: "(송금|이체|입금|출금|이용료 결제|상환)"
+    weight: 0.15
+  - pattern: "(계좌|계좌번호|가상계좌|안전계좌)"
+    weight: 0.15
+  - pattern: "(인증번호|보안코드|OTP)"
+    weight: 0.15
+  - pattern: "(검찰|경찰|수사협조|압수수색|계좌동결|지검|서|청)"
+    weight: 0.15
+  - pattern: "(원격|접속코드|제어|AnyDesk|TeamViewer|퀵서포트|원격지원)"
+    weight: 0.15
+  - pattern: "(대환 대출|저금리 대환|대환대출|한도 조회)"
+    weight: 0.25
+
+entities:
+  url_weight: 0.08
+  phone_weight: 0.05
+  amount_weight: 0.07
+  account_weight: 0.10
+
+suspicious_domains:
+  - "gov-kr"
+  - "k0rea"
+  - "bank-kr"
+  - "me2.kr"
+  - "bit.ly"
+  - "tinyurl"
+  - "is.gd"
+  - "t.co"
